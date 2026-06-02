@@ -1,6 +1,59 @@
-# Ignore in all directories
-**/.DS_Store
+# =========================================================================
+# .gitignore — AI4Devs-design-2-2604 (Module 5 · RMA)
+# Delivery for this module: LTI-RMA/ (UserStories-iniciales.md + prompts.md)
+# Everything else (scratch, specboot reference, local tooling) stays out.
+# =========================================================================
+
+# --- Secrets & credentials -----------------------------------------------
 **/.env
-**/.env.example
+**/.env.local
+**/.env.*.local
+**/credentials*
+**/secret*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# --- OS / editor noise ---------------------------------------------------
+**/.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --- Dependencies / build artefacts --------------------------------------
 **/node_modules
+**/dist
+**/build
+**/.next
+**/.turbo
+**/coverage
+
+# --- Local AI-tooling configuration (per-developer, not for the repo) ----
+.claude/
+.cline/
+.clinerules/
+.cursor/
+.vscode/
+.idea/
+
+# --- Symlinks to docs/base-standards.md (would be broken without docs/) --
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+codex.md
+
+# --- Module-5 non-deliverable files at root ------------------------------
+LTI-RMA.md
+ReadMe.md
+/prompts.md
+
+# --- Reference docs and specs (local only) --------------------------------
+docs/
+ai-specs/
+openspec/
+Activity.md
+work/
+
+# --- Module prompt template (private) ------------------------------------
 **/prompts_master.md
